@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C4544061D1B8F460F82465A /* Pods_DollarExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A857C065006078996B8C1C5F /* Pods_DollarExchange.framework */; };
 		CCBE25FD29697BA400AA27F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE25FC29697BA400AA27F6 /* AppDelegate.swift */; };
 		CCBE25FF29697BA400AA27F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE25FE29697BA400AA27F6 /* SceneDelegate.swift */; };
 		CCBE260129697BA400AA27F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE260029697BA400AA27F6 /* ViewController.swift */; };
@@ -14,9 +15,16 @@
 		CCBE260729697BA400AA27F6 /* DollarExchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCBE260529697BA400AA27F6 /* DollarExchange.xcdatamodeld */; };
 		CCBE260929697BA500AA27F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBE260829697BA500AA27F6 /* Assets.xcassets */; };
 		CCBE260C29697BA500AA27F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE260A29697BA500AA27F6 /* LaunchScreen.storyboard */; };
+		CCE9582E296B3376006ACC09 /* Currrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE9582D296B3376006ACC09 /* Currrency.swift */; };
+		CCE95831296B3396006ACC09 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE95830296B3396006ACC09 /* InfoTableViewCell.swift */; };
+		CCE95833296B4167006ACC09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE95832296B4167006ACC09 /* MainViewController.swift */; };
+		CCE95836296B41CF006ACC09 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = CCE95835296B41CF006ACC09 /* welcome.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		168FBED3624D965165A7922A /* Pods-DollarExchange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DollarExchange.debug.xcconfig"; path = "Target Support Files/Pods-DollarExchange/Pods-DollarExchange.debug.xcconfig"; sourceTree = "<group>"; };
+		26F0F556B0F2150068B5F5CD /* Pods-DollarExchange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DollarExchange.release.xcconfig"; path = "Target Support Files/Pods-DollarExchange/Pods-DollarExchange.release.xcconfig"; sourceTree = "<group>"; };
+		A857C065006078996B8C1C5F /* Pods_DollarExchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DollarExchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBE25F929697BA400AA27F6 /* DollarExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBE25FC29697BA400AA27F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBE25FE29697BA400AA27F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +34,10 @@
 		CCBE260829697BA500AA27F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBE260B29697BA500AA27F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCBE260D29697BA500AA27F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE9582D296B3376006ACC09 /* Currrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currrency.swift; sourceTree = "<group>"; };
+		CCE95830296B3396006ACC09 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		CCE95832296B4167006ACC09 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CCE95835296B41CF006ACC09 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4544061D1B8F460F82465A /* Pods_DollarExchange.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13746394809DB1DECF69F9FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A857C065006078996B8C1C5F /* Pods_DollarExchange.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2CC7E5E5B10CB1C09723E22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				168FBED3624D965165A7922A /* Pods-DollarExchange.debug.xcconfig */,
+				26F0F556B0F2150068B5F5CD /* Pods-DollarExchange.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CCBE25F029697BA300AA27F6 = {
 			isa = PBXGroup;
 			children = (
 				CCBE25FB29697BA400AA27F6 /* DollarExchange */,
 				CCBE25FA29697BA400AA27F6 /* Products */,
+				B2CC7E5E5B10CB1C09723E22 /* Pods */,
+				13746394809DB1DECF69F9FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +90,68 @@
 		CCBE25FB29697BA400AA27F6 /* DollarExchange */ = {
 			isa = PBXGroup;
 			children = (
-				CCBE25FC29697BA400AA27F6 /* AppDelegate.swift */,
-				CCBE25FE29697BA400AA27F6 /* SceneDelegate.swift */,
-				CCBE260029697BA400AA27F6 /* ViewController.swift */,
-				CCBE260229697BA400AA27F6 /* Main.storyboard */,
+				CCE95834296B41B8006ACC09 /* Resources */,
+				CCE9582C296B3358006ACC09 /* App Delegate */,
+				CCBE261529697BC600AA27F6 /* Model */,
+				CCBE261429697BBE00AA27F6 /* View */,
+				CCBE261329697BAE00AA27F6 /* Controller */,
 				CCBE260829697BA500AA27F6 /* Assets.xcassets */,
-				CCBE260A29697BA500AA27F6 /* LaunchScreen.storyboard */,
 				CCBE260D29697BA500AA27F6 /* Info.plist */,
 				CCBE260529697BA400AA27F6 /* DollarExchange.xcdatamodeld */,
 			);
 			path = DollarExchange;
+			sourceTree = "<group>";
+		};
+		CCBE261329697BAE00AA27F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE260029697BA400AA27F6 /* ViewController.swift */,
+				CCE95832296B4167006ACC09 /* MainViewController.swift */,
+				CCE9582F296B3380006ACC09 /* Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCBE261429697BBE00AA27F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE260229697BA400AA27F6 /* Main.storyboard */,
+				CCBE260A29697BA500AA27F6 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCBE261529697BC600AA27F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCE9582D296B3376006ACC09 /* Currrency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCE9582C296B3358006ACC09 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE25FC29697BA400AA27F6 /* AppDelegate.swift */,
+				CCBE25FE29697BA400AA27F6 /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		CCE9582F296B3380006ACC09 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CCE95830296B3396006ACC09 /* InfoTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CCE95834296B41B8006ACC09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCE95835296B41CF006ACC09 /* welcome.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCBE261029697BA500AA27F6 /* Build configuration list for PBXNativeTarget "DollarExchange" */;
 			buildPhases = (
+				670FF141977785B14C4F3F3D /* [CP] Check Pods Manifest.lock */,
 				CCBE25F529697BA400AA27F6 /* Sources */,
 				CCBE25F629697BA400AA27F6 /* Frameworks */,
 				CCBE25F729697BA400AA27F6 /* Resources */,
+				D53A1BDC3E3288115ABFFF23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,18 +217,64 @@
 				CCBE260C29697BA500AA27F6 /* LaunchScreen.storyboard in Resources */,
 				CCBE260929697BA500AA27F6 /* Assets.xcassets in Resources */,
 				CCBE260429697BA400AA27F6 /* Main.storyboard in Resources */,
+				CCE95836296B41CF006ACC09 /* welcome.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		670FF141977785B14C4F3F3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DollarExchange-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D53A1BDC3E3288115ABFFF23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DollarExchange/Pods-DollarExchange-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DollarExchange/Pods-DollarExchange-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DollarExchange/Pods-DollarExchange-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCBE25F529697BA400AA27F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE95833296B4167006ACC09 /* MainViewController.swift in Sources */,
+				CCE9582E296B3376006ACC09 /* Currrency.swift in Sources */,
 				CCBE260729697BA400AA27F6 /* DollarExchange.xcdatamodeld in Sources */,
 				CCBE260129697BA400AA27F6 /* ViewController.swift in Sources */,
+				CCE95831296B3396006ACC09 /* InfoTableViewCell.swift in Sources */,
 				CCBE25FD29697BA400AA27F6 /* AppDelegate.swift in Sources */,
 				CCBE25FF29697BA400AA27F6 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +418,7 @@
 		};
 		CCBE261129697BA500AA27F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168FBED3624D965165A7922A /* Pods-DollarExchange.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +447,7 @@
 		};
 		CCBE261229697BA500AA27F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F0F556B0F2150068B5F5CD /* Pods-DollarExchange.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

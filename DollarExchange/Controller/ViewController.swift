@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         fetchingData()
     }
     
-    //MARK: - Data Fetchign
+    //MARK: - Data Fetching
     
     func fetchingData(){
         
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         
     }
 }
-
+    //MARK: - TableView Extension
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currencyList.count

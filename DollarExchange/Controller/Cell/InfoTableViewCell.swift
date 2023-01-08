@@ -10,7 +10,7 @@ import SnapKit
 
 class InfoTableViewCell: UITableViewCell {
 
-    
+    //MARK: - Title
     let titleLabel: UILabel = {
        let title = UILabel()
         title.font = .boldSystemFont(ofSize: 20)
@@ -18,6 +18,7 @@ class InfoTableViewCell: UITableViewCell {
         return title
     }()
     
+    //MARK: - Date
     let datelabe: UILabel = {
        let date = UILabel()
         date.font = .boldSystemFont(ofSize: 20)
@@ -25,6 +26,7 @@ class InfoTableViewCell: UITableViewCell {
         return date
     }()
     
+    //MARK: - Code
     let codeLabel: UILabel = {
        let code = UILabel()
         code.font = .boldSystemFont(ofSize: 20)
@@ -32,6 +34,7 @@ class InfoTableViewCell: UITableViewCell {
         return code
     }()
     
+    //MARK: - Price
     let priceLabel: UILabel = {
        let price = UILabel()
         price.font = .boldSystemFont(ofSize: 20)
@@ -39,6 +42,7 @@ class InfoTableViewCell: UITableViewCell {
         return price
     }()
     
+    //MARK: - Selling Price
     let cellPriceLabel: UILabel = {
        let cell = UILabel()
         cell.font = .boldSystemFont(ofSize: 20)
@@ -46,6 +50,7 @@ class InfoTableViewCell: UITableViewCell {
         return cell
     }()
     
+    //MARK: - Buying Price
     let buyPriceLabel: UILabel = {
        let buy = UILabel()
         buy.font = .boldSystemFont(ofSize: 20)
@@ -61,6 +66,7 @@ class InfoTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
      
+        //MARK: - UIFrames
         self.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(self.snp.top).offset(20)

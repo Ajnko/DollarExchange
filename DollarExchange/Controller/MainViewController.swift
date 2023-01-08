@@ -11,8 +11,9 @@ import SnapKit
 
 class MainViewController: UIViewController {
     
-    //MARK: - LottieAnimation
+    //MARK: - Lottie Animation
     var animationView = LottieAnimationView(name: "welcome")
+    
     
     //MARK: - Greeting Label
     let mainLabel: UILabel = {
@@ -34,11 +35,12 @@ class MainViewController: UIViewController {
         return button
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initView()
     }
+    
     func initView(){
         
         //MARK: - Greeting Label Frames
@@ -75,10 +77,9 @@ class MainViewController: UIViewController {
         
     }
     
+    //MARK: - Func Enter Button Clicked
     @objc func enterButtonClicked(){
         let vc = ViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
-
-
 }

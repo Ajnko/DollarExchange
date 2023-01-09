@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Reachability
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
     }()
     
     var currencyList = [DollarCurrency]()
+    
+    let reachability = try! Reachability()
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,19 +62,68 @@ class ViewController: UIViewController {
     }
     
     //MARK: - UIFrames
-    
     func initView(){
 
         //MARK: - Table View
-        
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
     }
+    
+    //Checking Connection
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.reachability.whenReachable = { reachability in
+//                self.showAlert(tittle: "Ooops", message: "Something went wrong")
+
+                if reachability.connection == .wifi {
+                    print("Reachable via WiFi")
+                } else {
+                    print("Reachable via Cellular")
+                }
+                
+            }
+            self.reachability.whenUnreachable = { _ in
+                self.showAlert(tittle: "Ooops", message: "Something went wrong")
+                print("Not reachable")
+            }
+
+            do {
+                try self.reachability.startNotifier()
+            } catch {
+                print("Unable to start notifier")
+            }
+        }
+    }
+    
+    deinit {
+        reachability.stopNotifier()
+    }
+    
+    //MARK: - Alert
+    
+    func showAlert(tittle: String , message: String) {
+
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) { make in
+            
+        }
+        let noAction = UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil)
+        
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+
+
+        DispatchQueue.main.async {
+            self.present(alert, animated: true,completion: nil)
+        }
+
+    }
+
 }
     //MARK: - TableView Extension
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -89,6 +141,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
 }
-
